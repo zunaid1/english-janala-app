@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>English জানালা</title>
+
+	<!-- Split Type JS -->
+	<script src="https://unpkg.com/split-type"> </script>
+
+	<!-- font awsome cdn -->
+	<script src="https://kit.fontawesome.com/c53d808e7d.js" crossorigin="anonymous"></script>
+
+	<!-- Tailwind cdn -->
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+	<!-- Daisy CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<!-- custome font -->
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+
+	<style>
+		.active {
+			color: white !important;
+			background-color: #422AD5;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<!-- bg-gray-100/50 fixed top-0 left-0 w-full border-b-4 border-gray-600/30 shadow-sm p-4 z-50 mb-4 -->
+	<!-- //Nav section -->
+	<header id="header"
+		class="hidden bg-gray-100/80 fixed top-0 left-0 w-full border-b-4 border-gray-600/30 shadow-sm p-4 z-50 mb-4">
+		<nav class="flex flex-col md:flex-row justify-between py-3 w-11/12 mx-auto border-[#C6BDBD]">
+			<div class="flex justify-center items-center gap-1 mb-10 md:mb-0">
+				<h3 class="font-bold">English</h3>
+				<img class="w-8 h-8" src="./assets/logo.png" alt="">
+				<h3>জানালা</h3>
+			</div>
+
+
+			<nav class="">
+				<ul class="flex flex-row justify-center items-center gap-4 text-xl ">
+					<li class="btn btn-outline btn-primary nav-link">
+						<a href="#faq-section" class="nav-link">
+							<i class="fa-solid fa-circle-question"></i> FAQ
+						</a>
+
+					</li>
+					<li class="btn btn-outline btn-primary nav-link">
+						<a href="#learn-section" class="nav-link">
+							<i class="fa-solid fa-book-open"></i> Learn
+						</a>
+					</li>
+					<li id="logout" class="btn btn-outline btn-primary nav-link">
+						<a href="#learn-section" class="nav-link">
+							<i class="fa-solid fa-right-from-bracket"></i> Logout
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+
+		</nav>
+	</header>
+
+	<main class="w-11/12 mx-auto my-10">
+		<!-- banner section -->
+		<section id="banner-section"
+			class="mb-10 flex flex-col-reverse md:flex-row md:justify-between items-center mt-10">
+			<!-- banner text -->
+			<div class="py-10">
+				<div class="space-y-6">
+					<h1 class="text-5xl font-bold"><span class="text-[#00BCFF] ">English</span> is Easy</h1>
+					<p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান,
+						আমাদের
+						Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+				</div>
+
+				<form action="" class="flex flex-col py-2">
+
+					<input id="userId" class="w-[400px] input border-gray-300" type="text" required placeholder="admin"
+						value="" />
+					<br>
+
+					<input id="password" class="w-[400px] input border-gray-300" type="password" required
+						placeholder="123456" value="" />
+					<br>
+					<button id="btn-start" class="text-white btn btn-primary w-2/6">Get Started</button>
+
+
+				</form>
+
+			</div>
+
+			<!-- banner image -->
+			<div>
+				<img src="./assets/hero-student.png" alt="">
+
+			</div>
+
+		</section>
+
+
+		<!-- Learn vocabularies -->
+		<section id="learn-section" class="hidden mt-50">
+
+			<!-- lessons level -->
+			<section>
+				<h1 class="text-center font-bold text-5xl"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+				</h1>
+
+				<div id="lesson-container" class="flex flex-row justify-center flex-wrap py-5 gap-5">
+					<div>
+						<!-- <button class=" border-2 border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white px-4 py-2 rounded-lg transition duration-300 focus:text-white">
+							Lesson-1
+						</button> -->
+
+					</div>
+				</div>
+			</section>
+
+
+			<section id="spinner" class="text-center py-10 hidden">
+				<span class="loading loading-spinner text-primary"></span>
+				<span class="loading loading-bars loading-xl"></span>
+
+			</section>
+
+			<!-- Word container -->
+			<section id="word-container" class="bg-gray-100 grid grid-cols-1 md:grid-cols-3 gap-3 my-4 p-4">
+
+				<!--Initial card -->
+				<div id="init-card" class="py-20 col-span-full flex flex-col justify-center items-center text-center">
+					<!-- <img class="w-[120px]" src="./assets/alert-error.png" alt="" /> -->
+					<p class="text-sm font-hind">আপনি এখনো কোন Lesson Select করেন নি</p>
+					<h2 class="text-[34px] font-hind">আপনি Lesson Select করুন।</h2>
+				</div>
+
+			</section>
+
+		</section>
+
+
+
+		<!-- FAQ Section -->
+		<section id="faq-section" class="hidden my-10  py-4 mb-30">
+			<h1 class="text-center font-bold text-5xl my-10"><span class="text-[#00BCFF]">Frequently</span> Asked
+				Questions </h1>
+
+			<div class="collapse collapse-plus bg-base-100 border border-base-300">
+				<input type="radio" name="my-accordion-3" checked="checked" />
+				<div class="collapse-title font-semibold">What is the difference between var, let, and const
+					?</div>
+				<div class="collapse-content text-sm">
+					var is function-scoped and allows redeclaration, while let and const are block-scoped. let allows
+					reassignment, but const does not. var is hoisted with undefined, whereas let and const are hoisted
+					but stay in a "temporal dead zone" until initialized.
+				</div>
+			</div>
+			<div class="collapse collapse-plus bg-base-100 border border-base-300">
+				<input type="radio" name="my-accordion-3" />
+				<div class="collapse-title font-semibold">What is the difference between map(), forEach(), and filter()
+					?</div>
+				<div class="collapse-content text-sm">
+					The map(), forEach(), and filter() methods in JavaScript are used for iterating over arrays but
+					serve different purposes. map() creates a new array by applying a transformation function to each
+					element, making it useful when you need a modified version of the original array. forEach() simply
+					executes a function on each element without returning a new array, making it ideal for performing
+					side effects like logging or updating variables. filter(), on the other hand, returns a new array
+					containing only the elements that meet a specified condition. While map() and filter() return new
+					arrays, forEach() does not return anything, making it best suited for actions that don’t require
+					data transformation.
+				</div>
+			</div>
+			<div class="collapse collapse-plus bg-base-100 border border-base-300">
+				<input type="radio" name="my-accordion-3" />
+				<div class="collapse-title font-semibold"> explain arrow functions and how they are different from
+					regular functions
+				</div>
+				<div class="collapse-content text-sm">
+					Arrow functions in JavaScript provide a concise syntax using => and differ from regular functions by
+					not having their own this, arguments, or prototype. They inherit this from the surrounding scope,
+					making them useful for callbacks but unsuitable for object methods requiring this. They also cannot
+					be used as constructors and allow implicit returns for single expressions.
+				</div>
+			</div>
+
+			<div class="collapse collapse-plus bg-base-100 border border-base-300">
+				<input type="radio" name="my-accordion-3" />
+				<div class="collapse-title font-semibold">How JavaScript Promises work?
+				</div>
+				<div class="collapse-content text-sm">
+					JavaScript Promises represent the eventual completion (or failure) of an asynchronous operation and
+					its resulting value. A Promise is in one of three states: pending, fulfilled, or rejected. When a
+					Promise is created, it starts in the pending state and eventually transitions to either fulfilled
+					(with a resolved value) or rejected (with an error). You can handle these outcomes using .then() for
+					fulfillment and .catch() for errors. Promises allow for cleaner, more manageable code compared to
+					callbacks, especially when chaining multiple asynchronous operations.
+				</div>
+			</div>
+
+			<div class="collapse collapse-plus bg-base-100 border border-base-300">
+				<input type="radio" name="my-accordion-3" />
+				<div class="collapse-title font-semibold"> How closures work in JavaScript?
+				</div>
+				<div class="collapse-content text-sm">
+					Closures in JavaScript occur when a function retains access to its lexical scope, even after the
+					outer function has finished executing. This means that an inner function can access variables and
+					parameters from its outer function, even after the outer function has returned. Closures allow for
+					private data encapsulation and are often used for creating functions with preserved states, such as
+					in factory functions or event handlers. They work because JavaScript functions "remember" the scope
+					in which they were created, not just where they were called. This behavior enables powerful
+					programming patterns like data hiding and partial application.
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+
+	<!-- footer section -->
+	<footer id="footer-section">
+		<div class="w-11/12 mx-auto border-t-2 border-[#FFEBEB]">
+
+			<section class="flex flex-col md:flex-row md:justify-between items-center my-4 py-4">
+				<!-- footer left section -->
+				<div class="text-center md:text-left space-y-4">
+					<div class="flex justify-center md:justify-start items-center md:items-center gap-1 font-bold">
+						<h3 class="font-semibold text-[20px]">English</h3>
+						<img class="w-8 h-8" src="./assets/logo.png" alt="">
+						<h3 class="font-normal text-[20px]">জানালা</h3>
+					</div>
+					<h1 class="text-[20px] font-medium">ইংরেজি শিখুন সহজে</h1>
+					<p class="text-xl">Providing ED-Tech Applications since 2025</p>
+				</div>
+
+
+				<!-- footer right section -->
+				<div class="mt-10 md:mt-0">
+					<p class="uppercase">Follow us</p>
+					<!-- footer icons -->
+					<div class="mt-5 flex justify-center gap-5 items-center">
+						<a href="https://www.facebook.com/mohammad.zunaid.58152" target="_blank"><img
+								src="./assets/fb-thumb.png" alt=""></a>
+						<a href="https://www.youtube.com/" target="_blank"><img src="./assets/youtube-thumb.png"
+								alt=""></a>
+						<a href="https://www.instagram.com/" target="_blank"><img src="./assets/instagram-thumb.png"
+								alt=""></a>
+						<a href="https://github.com/zunaid1" target="_blank"><img src="./assets/github-thumb.png"
+								alt=""></a>
+
+					</div>
+				</div>
+
+			</section>
+		</div>
+
+	</footer>
+
+
+
+
+
+	<!-- Modal  -->
+	<dialog id="word_details" class="modal">
+		<div class="modal-box">
+
+			<!-- Modal details--data -->
+			<div id="details-container">
+
+			</div>
+		</div>
+	</dialog>
+	<script>
+		// function closeModal() {
+
+		// 	document.getElementById('word_details').classList.add('hidden');
+		// }
+		function closeModal() {
+			const modal = document.getElementById('word_details');
+			modal.classList.add('hidden');
+
+			// If there's an overlay, hide it
+			const overlay = document.getElementById('modal_overlay'); // Change this to your actual overlay ID
+			if (overlay) {
+				overlay.classList.add('hidden');
+			}
+
+			// Enable scrolling if it was disabled
+			document.body.style.overflow = 'auto';
+			document.body.style.pointerEvents = 'auto';
+		}
+
+
+
+
+	</script>
+	<script src="./script/learnVoca.js"> </script>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="./script/smothScrolling.js"></script>
+	<script src="./script/validation.js"></script>
+
+
+</body>
+
+</html>
